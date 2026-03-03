@@ -23,9 +23,7 @@ else:
         if key in tweet_upper:
             found = True
             #if the key is found in the tweet, we set found to true and print out original tweet 
-            print(f"we found {key} abbreviation in your post")
+            print(f"Abbreviation found: {key} - {abbreviations[key]}")
 
     if not found:
         print("No abbreviations found in the tweet.")
-        
-            
