@@ -1,0 +1,31 @@
+abbreviations = {
+    "LOL": "laughing out loud",
+    "BRB": "be right back"
+}
+
+
+#getting user name to know who is posting the tweet
+user_nm = input("Enter your username: ")
+#having the user input a tweet. We inform the user to write and inform of the limit of characters to use.
+tweet = (input("write tweet (160 character limit): " ))
+
+# we are using an if/else statement to check if the tweet is too long. 
+if len(tweet) > 160:
+    #runs if tweet exceeds 160 characters
+    print("Tweet is too long, please shorten it to 160 characters or less.")
+else:
+    found = False
+    #runs if tweet is 160 characters or less. 
+    tweet_upper = tweet.upper()
+    #using .upper() to make the tweet all upppercase
+    print(f"{user_nm} posted: {tweet}")
+    for key in abbreviations:
+        if key in tweet_upper:
+            found = True
+            #if the key is found in the tweet, we set found to true and print out original tweet 
+            print(f"we found {key} abbreviation in your post")
+
+    if not found:
+        print("No abbreviations found in the tweet.")
+        
+            
